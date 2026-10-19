@@ -17,7 +17,6 @@ import {
 const STORAGE_KEY = "fintelligence-transactions-v1";
 const API_URL = "http://127.0.0.1:8000/analyze";
 
-// Design tokens (Pinterest-style pastel boards, light + dark)
 const TILE_BASE =
   "rounded-[28px] p-6 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1E1B3A]/10";
 
@@ -68,7 +67,6 @@ export default function AnalyticsPage() {
   const [analysisError, setAnalysisError] = useState("");
   const [transactionsLoaded, setTransactionsLoaded] = useState(false);
 
-  // Load saved transactions.
   useEffect(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -88,7 +86,6 @@ export default function AnalyticsPage() {
     }
   }, []);
 
-  // Analyze transactions using FastAPI.
   const analyzeData = useCallback(async (data) => {
     if (data.length === 0) {
       setAnalysis(null);
@@ -123,7 +120,7 @@ export default function AnalyticsPage() {
                 : JSON.stringify(errorData.detail);
           }
         } catch {
-          // Keep the default error message.
+     
         }
 
         throw new Error(message);
@@ -159,7 +156,6 @@ export default function AnalyticsPage() {
     }
   }, [transactionsLoaded, transactions, analyzeData]);
 
-  // Calculate totals from the saved transactions as a fallback.
   const income = useMemo(
     () =>
       transactions
@@ -241,10 +237,8 @@ export default function AnalyticsPage() {
             </p>
           </div>
         </header>
-
-        {/* Pinterest-style masonry board */}
         <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5 [&>*]:break-inside-avoid">
-          {/* Python backend status */}
+
           <section className={`${TILE_BASE} ${TONES.lilac}`}>
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
@@ -301,7 +295,6 @@ export default function AnalyticsPage() {
             )}
           </section>
 
-          {/* Summary cards */}
           <SummaryCard
             tone="mint"
             title="Total Income"
@@ -326,7 +319,6 @@ export default function AnalyticsPage() {
             color={netBalance >= 0 ? GOOD : BAD}
           />
 
-          {/* Financial insights */}
           <div className={`${TILE_BASE} ${TONES.butter}`}>
             <div className="flex items-center gap-3">
               <IconBubble>
@@ -365,7 +357,6 @@ export default function AnalyticsPage() {
             </p>
           </div>
 
-          {/* Charts */}
           <div className={`${TILE_BASE} ${TONES.surface}`}>
             <div className="mb-6 flex items-center gap-3">
               <IconBubble>

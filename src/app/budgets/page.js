@@ -35,7 +35,6 @@ const currencySymbols = {
   GBP: "£",
 };
 
-// Design tokens (Pinterest-style pastel boards, light + dark)
 const TILE_BASE =
   "rounded-[28px] p-6 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1E1B3A]/10";
 
@@ -241,9 +240,8 @@ export default function BudgetsPage() {
           </button>
         </header>
 
-        {/* Pinterest-style masonry board */}
         <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5 [&>*]:break-inside-avoid">
-          {/* Monthly budget overview */}
+      
           <section className={`${TILE_BASE} ${TONES.peach}`}>
             <div className="mb-4 flex items-center justify-between gap-4">
               <div>
@@ -307,7 +305,6 @@ export default function BudgetsPage() {
             )}
           </section>
 
-          {/* Category summary */}
           <SummaryCard
             tone="mint"
             title="Total Category Budget"
@@ -465,7 +462,6 @@ export default function BudgetsPage() {
         </p>
       </div>
 
-      {/* Add or update category budget */}
       {showModal && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-[#1E1B3A]/60 p-4 backdrop-blur-sm"

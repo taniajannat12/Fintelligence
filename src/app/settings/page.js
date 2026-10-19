@@ -29,7 +29,6 @@ const CURRENCIES = {
   GBP: { label: "GBP — British Pound (£)", symbol: "£" },
 };
 
-// Design tokens (Pinterest-style pastel boards, light + dark)
 const TILE_BASE =
   "rounded-[28px] p-6 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1E1B3A]/10";
 
@@ -163,9 +162,9 @@ export default function SettingsPage() {
         </header>
 
         <form onSubmit={handleSave}>
-          {/* Pinterest-style masonry board */}
+       
           <div className="columns-1 gap-5 sm:columns-2 [&>*]:mb-5 [&>*]:break-inside-avoid">
-            {/* Profile */}
+          
             <section className={`${TILE_BASE} ${TONES.lilac}`}>
               <div className="mb-6 flex items-center gap-3">
                 <IconBubble>
@@ -197,7 +196,6 @@ export default function SettingsPage() {
               />
             </section>
 
-            {/* Finance Preferences */}
             <section className={`${TILE_BASE} ${TONES.peach}`}>
               <div className="mb-6 flex items-center gap-3">
                 <IconBubble>
@@ -269,7 +267,6 @@ export default function SettingsPage() {
               </div>
             </section>
 
-            {/* Notifications */}
             <section className={`${TILE_BASE} ${TONES.mint}`}>
               <div className="mb-5 flex items-center gap-3">
                 <IconBubble>
@@ -307,7 +304,6 @@ export default function SettingsPage() {
               </p>
             </section>
 
-            {/* Privacy */}
             <section className={`${TILE_BASE} ${TONES.sky}`}>
               <div className="flex items-start gap-3">
                 <IconBubble>
@@ -326,7 +322,6 @@ export default function SettingsPage() {
             </section>
           </div>
 
-          {/* Save */}
           <div className="mt-1 flex flex-wrap items-center gap-4">
             <button
               type="submit"

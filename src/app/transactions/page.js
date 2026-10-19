@@ -38,7 +38,6 @@ const categories = [
   "Other",
 ];
 
-// Design tokens (Pinterest-style pastel boards, light + dark)
 const TILE_BASE =
   "rounded-[28px] p-5 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1E1B3A]/10";
 

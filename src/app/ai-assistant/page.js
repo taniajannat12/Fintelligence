@@ -22,7 +22,6 @@ const suggestions = [
   "Give me a budget tip",
 ];
 
-// Design tokens (Pinterest-style pastel boards, light + dark)
 const TILE_BASE =
   "rounded-[28px] p-5 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1E1B3A]/10";
 
@@ -133,7 +132,7 @@ export default function AIAssistantPage() {
         error.message.toLowerCase().includes("fetch")
       ) {
         errorMessage =
-          "Python backend-এর সঙ্গে সংযোগ হচ্ছে না। Backend server চালু আছে কি না দেখো।";
+          "Python Backend Cannot work";
       }
 
       setMessages((previous) => [

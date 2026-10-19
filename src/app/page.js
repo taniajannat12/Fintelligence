@@ -50,7 +50,6 @@ const CURRENCY_SYMBOLS = {
   GBP: "£",
 };
 
-// Design tokens (Pinterest-style pastel boards, light + dark)
 const TILE_BASE =
   "rounded-[28px] p-5 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1E1B3A]/10 md:p-6";
 
@@ -286,8 +285,6 @@ export default function Dashboard() {
 
   const balance = income - expenses;
 
-  // Monthly budget comes from Settings.
-  // Category budgets are managed separately on the Budgets page.
   const totalBudget = Math.max(
     0,
     Number(settings.monthlyBudget || 0) || 0
