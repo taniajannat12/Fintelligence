@@ -4,6 +4,9 @@
 
 Fintelligence is a personal finance management web application designed to help users track income and expenses, manage budgets, analyze spending habits, and receive AI-powered financial insights.
 
+Live Link:https://fintelligence-ztt6.vercel.app/
+
+
 ##  Features
 
 - **Dashboard** — View financial summaries and recent transactions.
